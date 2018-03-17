@@ -363,9 +363,10 @@ In the package that defines your domain objects, define the types and interfaces
 #### Smaller Tips
 
 - Make comments in full sentences, always.
-
+```go
 	// An Order represents an order from a customer.
 	type Order struct {}
+```
 ---
 
 #### Smaller Tips
@@ -377,7 +378,7 @@ Use `goimports` to manage your imports, and they'll always be in canonical order
 #### Smaller Tips
 
 Avoid the `else` clause.  Especially in error handling.  
-```
+```go
 	if err != nil {
 		// error handling
 		return // or continue, etc.

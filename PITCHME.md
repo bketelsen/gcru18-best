@@ -15,6 +15,12 @@
 [https://cda.ms/jP](https://cda.ms/jP)
 ---
 
+---?image=assets/image/gitpitch-audience.jpg&opacity=100
+
+@title[My Hero]
+
+---
+
 #### Write Code Like the Go Team
 
 - how to organize your code into packages, and what those packages should contain  

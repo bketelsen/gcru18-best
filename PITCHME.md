@@ -6,7 +6,7 @@
 - Microsoft Azure - Cloud Developer Advocate
 - Twitter: @ashleymcnamara
 - Github: ashleymcnamara
-- GOPHERS!: [https://github.com/ashleymcnamara/gophers](https://github.com/ashleymcnamara/gophers)
+- GOPHERS!: https://github.com/ashleymcnamara/gophers
 
 --- 
 
@@ -116,7 +116,7 @@ Application package organization has a huge impact on the testability and functi
 
 #### Package Organization - Applications
 
-When writing an application your should be to write code that is easy to understand, easy to refactor, and easy for someone else to maintain.
+When writing an application your goal should be to write code that is easy to understand, easy to refactor, and easy for someone else to maintain.
 
 ---
 

@@ -354,7 +354,9 @@ In the package that defines your domain objects, define the types and interfaces
 ```
 	package: inventory
 
-	orders.go -- contains Orders type and OrderStorage interface
+	orders.go 
+	-- contains Orders type 
+	   and OrderStorage interface
 ```
 ---
 

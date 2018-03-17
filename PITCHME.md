@@ -1,6 +1,13 @@
 # Code Like the Go Team
 
 ---
+## About Me
+
+- Microsoft Azure - Cloud Developer Advocate
+- Twitter: @ashleymcnamara
+- Github: ashleymcnamara
+
+---
 
 #### Write Code Like the Go Team
 
@@ -47,10 +54,7 @@ We can't talk about them separately because one influences the other.
 - Packages contain code that has a single purpose
 
 ```
-	archive   cmd       crypto    errors    go        index     math      path      sort      syscall   unicode
-	bufio     compress  database  expvar    hash      internal  mime      reflect   strconv   testing   unsafe
-	builtin   container debug     flag      html      io        net       regexp    strings   text      vendor
-	bytes     context   encoding  fmt       image     log       os        runtime   sync      time
+	archive	cmd	crypto	errors	go	index	math	path	sort	syscall	unicode bufio	compress  database  expvar	hash	internal  mime      reflect	strconv	testing	unsafe builtin	container debug	flag  
 ```
 
 ---
@@ -90,7 +94,15 @@ What should the organization of your executable applications look like?
 
 When you have an application, the package organization is subtly different.  The difference is the command, the executable that ties all of those packages together.
 
+---
+
+#### Package Organization - Applications
+
 Application package organization has a huge impact on the testability and functionality of your system.
+
+---
+
+#### Package Organization - Applications
 
 When writing an application your should be to write code that is easy to understand, easy to refactor, and easy for someone else to maintain.
 
@@ -103,10 +115,18 @@ Most libraries focus on providing a singularly scoped function; logging, encodin
 
 Your application will tie all of those libraries together to create a tool or service.  That tool or service will be much larger in scope.  
 
+---
+
+#### Package Organization - Applications
+
 When you're building an application, you should organize your code into packages, but those packages should be centered on two categories:
 
 - Domain Types
 - Services
+
+---
+
+#### Package Organization - Applications
 
 *Domain*Types* are types that model your business functionality and objects. 
 
@@ -119,6 +139,10 @@ https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1
 #### Package Organization - Applications
 
 A domain type is the substance of your application.  If you have an inventory application, your domain types might include *Product* and *Supplier*.  If you have an HR administration system, your domain types might include *Employee*, *Department*, and *Business*Unit*.
+
+---
+
+#### Package Organization - Applications
 
 The package containing your domain types should also define the interfaces between your domain types and the rest of the world.  These interfaces define the things you want to do with your domain types.
 
@@ -134,6 +158,10 @@ The package containing your domain types should also define the interfaces betwe
 
 Your domain type package should be the root of your application repository.  This makes it clear to anyone opening the codebase what types are being used, and what operations will be performed on those types.
 
+---
+
+#### Package Organization - Applications
+
 The domain type package, or *root* package of your application should not have any external dependencies.  It exists for the sole purpose of describing your types and their behaviors.
 
 ---
@@ -141,6 +169,10 @@ The domain type package, or *root* package of your application should not have a
 #### Package Organization - Applications
 
 The implementations of your domain interfaces should be in separate packages, organized by dependency.
+
+---
+
+#### Package Organization - Applications
 
 Dependencies include:
 
@@ -159,7 +191,6 @@ Why one package per dependency?
 - Easy substitution/replacement
 - No circular dependencies
 
-We'll dive deeper into the implications of package organization in the *Interfaces* and *Testing* modules.
 
 ---
 
@@ -183,11 +214,11 @@ Naming things *is* hard, but putting some thought into your type, function, and 
 A package name should have the following characteristics:
 
 - short
-	Prefer "transport" over "transportmechanisms"
+	- Prefer "transport" over "transportmechanisms"
 
 - clear 
-	Name for clarity based on function: "bytes" 
-	Name to describe implementation of external dependency: "postgres" 
+	- Name for clarity based on function: "bytes" 
+	- Name to describe implementation of external dependency: "postgres" 
 
 ---
 
@@ -200,6 +231,10 @@ Packages should provide functionality for one and only one purpose.  Avoid *catc
 -	etc.
 
 Frequently they're a sign that you're missing an interface somewhere.
+
+---
+
+#### Naming Conventions - Packages
 
  `util.ConvertOtherToThing()` should probably be refactored into a Thinger interface
 
@@ -247,6 +282,10 @@ Avoid a package-level function name that repeats the package name.
 
 The package name already declares the purpose of the package, so there's no need to repeat it.
 
+---
+
+#### Naming Conventions - Functions and Methods
+
 Go code doesn't have setters and getters.
 
 	GOOD:  custSvc.Customer()
@@ -290,19 +329,24 @@ Some purists think that all interfaces should end in `-er`.  I think interfaces 
 Inside a package separate code into logical concerns.
 
 If the package deals with multiple types, keep the logic for each type in its own source file:
-
-	src/goteam/exercises/inventory/postgres
+```
+	package: postgres
 
 	orders.go
 	suppliers.go
 	products.go
+```
+---
+
+#### Naming Conventions - Source Code
 
 In the package that defines your domain objects, define the types and interfaces for each object in the same source file:
 
-	src/goteam/exercises/inventory
+```
+	package: inventory
 
 	orders.go -- contains Orders type and OrderStorage interface
-
+```
 ---
 
 #### Smaller Tips
@@ -321,7 +365,6 @@ Use `goimports` to manage your imports, and they'll always be in canonical order
 
 #### Smaller Tips
 
-
 Avoid the `else` clause.  Especially in error handling.  
 ```
 	if err != nil {
@@ -336,3 +379,19 @@ Avoid the `else` clause.  Especially in error handling.
 ## Coding Like the Go Team
 
 Following these conventions will make your source code easier to read, easier to maintain, and easier for someone else to understand.
+
+---
+
+### Questions?
+
+<br>
+
+@fa[twitter gp-contact](@ashleymcnamara)
+
+
+
+---?image=assets/image/gitpitch-audience.jpg&opacity=100
+
+@title[Thank You!]
+
+## Thank You

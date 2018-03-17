@@ -89,7 +89,7 @@ Some commonalities:
 
 #### Package Organization - Applications
 
-The packages we've seen are all libraries.  They're intended to be used by imported and used by some executable program like a service or command line tool.
+The packages we've seen are all libraries.  They're intended to be imported and used by some executable program like a service or command line tool.
 
 What should the organization of your executable applications look like?
 
@@ -133,7 +133,7 @@ When you're building an application, you should organize your code into packages
 
 #### Package Organization - Applications
 
-*Domain*Types* are types that model your business functionality and objects. 
+*Domain Types* are types that model your business functionality and objects. 
 
 *Services* are packages that operate on or with the domain types.
 
@@ -143,7 +143,7 @@ https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1
 
 #### Package Organization - Applications
 
-A domain type is the substance of your application.  If you have an inventory application, your domain types might include *Product* and *Supplier*.  If you have an HR administration system, your domain types might include *Employee*, *Department*, and *Business*Unit*.
+A domain type is the substance of your application.  If you have an inventory application, your domain types might include *Product* and *Supplier*.  If you have an HR administration system, your domain types might include *Employee*, *Department*, and *Business Unit*.
 
 ---
 
@@ -167,7 +167,8 @@ Your domain type package should be the root of your application repository.  Thi
 
 #### Package Organization - Applications
 
-The domain type package, or *root* package of your application should not have any external dependencies.  It exists for the sole purpose of describing your types and their behaviors.
+The domain type package, or *root* package of your application should not have any external dependencies.  
+> It exists for the sole purpose of describing your types and their behaviors.
 
 ---
 

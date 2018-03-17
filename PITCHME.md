@@ -7,6 +7,11 @@
 - Twitter: @ashleymcnamara
 - Github: ashleymcnamara
 
+--- 
+
+## This Talk
+
+[https://cda.ms/jP](https://cda.ms/jP)
 ---
 
 #### Write Code Like the Go Team

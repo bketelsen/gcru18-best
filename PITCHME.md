@@ -270,10 +270,9 @@ There are no bonus points in Go for obfuscating your code by using unnecessarily
 #### Naming Conventions - Variables
 
 - use repeated letters to represent a collection/slice/array
-	`var tt []*Thing`
-
+	- `var tt []*Thing`
 - inside a loop/range, use the single letter
-	`for i, t := range tt {}`
+	- `for i, t := range tt {}`
 
 These conventions are common inside Go's own source code.
 
@@ -302,7 +301,7 @@ Go code doesn't have setters and getters.
 #### Naming Conventions - Interfaces
 
 If your interface has only one function, append "-er" to the function name:
-```
+```go
 	type Stringer interface{
 		String() string
 	}
@@ -314,7 +313,7 @@ If your interface has only one function, append "-er" to the function name:
 
 If your interface has more than one function, use a name to represent its functionality:
 
-```
+```go
 	type CustomerStorage interface {
 		Customer(id int) (*Customer, error)
 		Save(c *Customer)  error

@@ -15,7 +15,7 @@
 [https://cda.ms/jP](https://cda.ms/jP)
 
 
----?image=assets/image/brian.jpg&opacity=100%
+---?image=assets/image/brian.jpeg&opacity=100%
 
 @title[My Hero]
 

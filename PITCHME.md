@@ -13,9 +13,9 @@
 ## This Talk
 
 [https://cda.ms/jP](https://cda.ms/jP)
----
 
----?image=assets/image/gitpitch-audience.jpg&opacity=100
+
+---?image=assets/image/brian.jpg
 
 @title[My Hero]
 

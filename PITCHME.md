@@ -327,6 +327,10 @@ If your interface has more than one function, use a name to represent its functi
 
 Some purists think that all interfaces should end in `-er`.  I think interfaces should be descriptive and readable.  
 
+```go
+	type CustomerStorer interface {}
+	type CustomerStorage interface {}
+```
 ---
 
 #### Naming Conventions - Source Code

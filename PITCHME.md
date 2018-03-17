@@ -254,10 +254,10 @@ Some common conventions for variable names:
 
 - use camelCase not snake_case
 - use single letter variables to represent indexes
-	`for i:=0; i < 10; i++ {}`
+	- `for i:=0; i < 10; i++ {}`
 - use short but descriptive variable names for other things
-	`var count int`
-	`var cust Customer`
+	- `var count int`
+	- `var cust Customer`
 
 ---
 
